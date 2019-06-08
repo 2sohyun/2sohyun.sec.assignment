@@ -1,0 +1,58 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+<title> 또니의 중앙과제2 </title>
+<link rel="stylesheet" type="text/css" href="{%static 'wordcount/css/wordstyle.css'%}">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+</head>
+
+<body>
+
+<center>
+<br><br>
+
+<h1> 당신이 입력한 텍스트는 몇 단어로 이루어져있을까요? ღ'-'ღ </h1><br><br>
+
+
+<div class = "image">
+<img src="{%static 'wordcount/img/bb.gif' %}" width="20%" height="200px"/><br><br><br>
+</div>
+
+
+<h2><strong>입력한 텍스트는 </strong>
+<!-- 입력받은 전체 텍스트 -->
+{{ fulltext }} 입니다ღ</h2>
+
+<h2> <strong>단어 갯수는 </strong>
+{{ total }} 개ღ</h2>
+
+
+<h2><strong>단어 카운트는</strong></h2>
+<!-- '단어' - '단어나온 횟수' -->
+
+{% for word, countTotal in dictionary %}
+{{ word }} = {{ countTotal }}개</h2>
+<br>
+{% endfor %}
+<br>
+<div class="btn">
+<button type="button" class="btn btn-danger" style="width:100px; height:50px;" onclick="location.href='{% url 'home' %}'">다시해보기!</button> <br>
+</div>
+<hr style="border:dotted 3px #ED9590;">
+
+<h3> 멋사 7기_성공회대학교_이소현 <img src="{%static 'wordcount/img/cc.gif' %}" width="90px" height="100px"/></h3>
+</center>
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+</body>
+</html>

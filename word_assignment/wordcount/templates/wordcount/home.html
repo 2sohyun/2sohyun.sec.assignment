@@ -1,0 +1,59 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+<title> 또니의 중앙과제2 </title>
+<link rel="stylesheet" type="text/css" href="{%static 'wordcount/css/wordstyle.css'%}">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+</head>
+
+<body>
+
+<center>
+<br><br>
+
+<h1> 중앙과제_word counter를 만들어 봅시당 ღ'-'ღ </h1><br>
+
+<!-- 카테고리 버튼 -->
+<div class="btn">
+<button type="button" class="btn btn-danger" onclick="location.href='{% url 'home' %}'" style="width:100px; height:50px;" >HOME</button> &nbsp;&nbsp;
+<button type="button" class="btn btn-warning" onclick="location.href='{% url 'about' %}'" style="width:100px; height:50px;" >ABOUT</button>&nbsp;&nbsp;
+<button type="button" class="btn btn-info" onclick="location.href='#inputtext'" style="width:100px; height:50px;">COUNT</button><br><br>
+</div>
+
+<!-- 중간 메인 이미지 -->
+<div class = "image">
+<img src="{%static 'wordcount/img/likelion.png' %}" width="100%" height="600px"/><br><br><br><br>
+</div>
+
+<!-- 텍스트 입력 폼 -->
+<div id="inputtext">
+<h1> 텍스트를 입력해주세요 ღ'-'ღ </h1>
+<form action="{% url 'count' %}">
+     <div class="form-group">
+    <label for="exampleFormControlTextarea1">입력하신 텍스트의 단어 갯수를 알려드려요!</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="fulltext" style="width:500px;"></textarea>
+  </div>
+    
+
+    <input type="image" src="{%static 'wordcount/img/button.png' %}" width="150px" height="70px" value="submit" name="submit"/> 
+</form>
+</div>
+<br>
+<hr style="border:dotted 3px #ED9590;">
+
+<h3> 멋사 7기_성공회대학교_이소현 <img src="{%static 'wordcount/img/cc.gif' %}" width="90px" height="100px"/></h3>
+</center>
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+</body>
+</html>

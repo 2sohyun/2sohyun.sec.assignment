@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+<title> 또니의 중앙과제2 </title>
+<link rel="stylesheet" type="text/css" href="{%static 'wordcount/css/wordstyle.css'%}">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+</head>
+
+<body>
+
+<center>
+<br><br>
+
+<h1> 이번 과제는 무엇인가요? ღ'-'ღ </h1><br><br>
+
+<p> 멋쟁이 사자처럼 7기 이소현 wordcount 중앙과제입니다! </p>
+<p> 텍스트를 입력하면, 단어의 갯수를 세어주는 기능을 해줍니다 ღ </p>
+<p> 배운 내용을 활용할 수 있도록 이쁘게 bootstrap과 css를 넣어주기도 해봤습니다(๑•̀ㅂ•́)</p>
+<p> 다음 과제는 어떤 과제일까요 ,, ? ㅎㅎㅎㅎㅎ </p>
+
+<div class = "image">
+<img src="{%static 'wordcount/img/aa.gif' %}" width="20%" height="200px"/><br><br><br>
+</div>
+<div class="btn">
+<button type="button" class="btn btn-danger" style="width:150px; height:50px;" onclick="location.href='{% url 'home' %}'">HOME으로 가기!</button> <br>
+</div>
+<h2> 
+<hr style="border:dotted 3px #ED9590;">
+
+<h3> 멋사 7기_성공회대학교_이소현 <img src="{%static 'wordcount/img/cc.gif' %}" width="90px" height="100px"/></h3>
+</center>
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+</body>
+</html>
